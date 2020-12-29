@@ -2,11 +2,9 @@ class GithubWebhooksController < ActionController::Base
   include GithubWebhook::Processor
 
   def github_push(payload)
-    return unless payload[:ref] == 'refs/heads/master'
+    event = ::GithubPushEventAdaptor.new(payload)
 
-    github_urls = payload[:head_commit][:modified].map { |url| "/#{url}" }
-
-    UpdateLessonContentJob.perform_async(github_urls)
+    UpdateLessonContentJob.perform_async(event.modified_urls) if event.merged_to_master?
   end
 
   private
