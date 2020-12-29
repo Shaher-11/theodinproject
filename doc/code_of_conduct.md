@@ -25,7 +25,7 @@ Examples of behavior that contribute to creating a positive environment include:
   * Focusing on what is best for the community.
 
   * Showing empathy towards other community members.
-
+  
 ## Our Responsibilities
 
 The Odin Project's core members are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
