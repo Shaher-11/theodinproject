@@ -1,5 +1,4 @@
 class GithubPushEventAdaptor
-
   def initialize(payload)
     @payload = payload
   end
@@ -15,5 +14,4 @@ class GithubPushEventAdaptor
   private
 
   attr_reader :payload
-
 end

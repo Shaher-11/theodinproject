@@ -6,5 +6,4 @@ class UpdateLessonContentJob
 
     lessons.each(&:import_content_from_github)
   end
-
 end
